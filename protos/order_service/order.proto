@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package order_service;
+option go_package = "genproto/order_service";
+
+message Order{
+    string id = 1;
+    string userID = 2;
+    string produtcID = 3;
+    int64 totalSum = 4; 
+}
+
+message CreateOrder{
+    string order_name = 1;
+    int64 totalSum = 2;
+}
+
+message PrimaryKey{
+    string id = 1;
+}
+
+message GetAllOrderRequest{
+    string search = 1;
+    int64 offset = 2;
+    int32 limit  = 3;
+}
+
+message GetAllOrderResponse{
+    repeated Order order = 1;
+    int64 count = 2;
+}
+
