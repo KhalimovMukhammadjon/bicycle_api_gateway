@@ -25,6 +25,9 @@ type Config struct {
 	Environment string // debug, test, release
 	Version     string
 
+	DefaultOffset string
+	DefaultLimit  string
+
 	OrderServiceHost string
 	OrderServicePort string
 
@@ -51,6 +54,9 @@ func Load() Config {
 
 	config.Environment = cast.ToString(getOrReturnDefaultValue("ENVIRONMENT", DebugMode))
 	config.Version = cast.ToString(getOrReturnDefaultValue("VERSION", "1.0"))
+
+	config.DefaultOffset = cast.ToString(getOrReturnDefaultValue("DEFAULT_OFFSET", "0"))
+	config.DefaultLimit = cast.ToString(getOrReturnDefaultValue("DEFAULT_LIMIT", "10"))
 
 	config.OrderServiceHost = cast.ToString(getOrReturnDefaultValue("ORDER_SERVICE_HOST", "localhost"))
 	config.OrderServicePort = cast.ToString(getOrReturnDefaultValue("ORDER_SERVICE_PORT", "8082"))
