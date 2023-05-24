@@ -1,9 +1,9 @@
 package client
 
 import (
-	"bicycle/api-gateway/config"
-	"bicycle/api-gateway/genproto/order_service"
-	"bicycle/api-gateway/genproto/user_service"
+	"bicycle/bicycle_api_gateway/config"
+	"bicycle/bicycle_api_gateway/genproto/order_service"
+	"bicycle/bicycle_api_gateway/genproto/user_service"
 
 	"google.golang.org/grpc"
 )
