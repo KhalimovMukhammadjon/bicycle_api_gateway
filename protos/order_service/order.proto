@@ -6,13 +6,16 @@ option go_package = "genproto/order_service";
 message Order{
     string id = 1;
     string userID = 2;
-    string produtcID = 3;
+    string productID = 3;
     int64 totalSum = 4; 
+    string first_name = 5;
+    string last_name = 6;
+    string phone_number = 7;
 }
 
 message CreateOrder{
     string userID = 1;
-    string produtcID = 2;
+    string productID = 2;
     int64 totalSum = 3;
 }
 

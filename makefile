@@ -18,3 +18,6 @@ copy-proto-module:
 
 gen-proto-module:
 	./scripts/gen_proto.sh ${CURRENT_DIR}
+
+swag-init:
+	swag init -g api/api.go -o api/docs
